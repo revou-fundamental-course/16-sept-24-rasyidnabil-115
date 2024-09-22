@@ -8,6 +8,7 @@
 
 .nav {
     display: flex;
+    justify-content: space-evenly;
 }
 
 nav>a{
@@ -31,9 +32,10 @@ nav>a{
 }
 
 .logo-icon {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     border: 1px solid black;
+    margin: 10px 10px;
     background-image: url("/Assets Miniproject/1719311006125.png");
     background-size: cover;
     background-position: center;
@@ -53,7 +55,6 @@ nav>a{
     height: 50px;
     width: 50px;
     border: 1px solid black;
-    background-image: url("/Assets Miniproject/1719311006125.png");
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -72,3 +73,5 @@ nav>a{
     align-items: center;
 
 }
+
+.

@@ -12,13 +12,13 @@
     <!-- Header --> 
     <header class="main-header">
         <!-- Logo -->
-        <div style="display: flex; flex-direction: row; align-items: center;">
+        <div class="logo-content">
             <div class="logo-icon"></div>
-            <h2>Cortez the 7<sup>th</sup> Generation</h2>
+            <h2 class="logo-text">Cortez the 7<sup>th</sup> Generation</h2>
         </div>
 
         <!-- Nav Bar -->
-        <nav class="nav-1">
+        <nav class="nav">
             <a href="#section-home">Home</a>
             <a href="#section-our-profile">Our Profile</a>
             <a href="#section-portofolio">Portofolio</a> 
@@ -26,13 +26,14 @@
         </nav>
     </header>
 
-    <hr style="margin: 4px;">
+    <hr style="margin: 0;">
      
     <main>
         <!-- Home -->
         <section id="section-home">
             <header id="header-section">
-                <h1>Hi, User! Welcome to my Website</h1>
+                <h1 style="margin-bottom: 1px;">Hi, <span id="username">User</span>! Welcome to my Website</h1>
+                <button id="changeUsername">Change Name</button>
             </header>
             <article>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -77,15 +78,6 @@
 
         <hr>
 
-        <!-- Portofolio -->
-        <section id="section-portofolio">
-            <header id="header-section">
-                <h1>Portofolio</h1>
-            </header>
-        </section>
-
-        <hr>
-
         <!-- Message Us -->
         <section id="section-message-us">
             <header id="header-section">
@@ -93,16 +85,34 @@
             </header>
 
             <section>
-                <form action="" method="post">
-                    <div>
-                        <label for="name">Name : </label>
-                        <input type="text" name="name" id="name">
-                        <br>
-                    </div>
-                    <div style="align-content: center;">
-                        <label for="gender">Gender : </label>
-                    </div>
+                <form name="message-form" onsubmit="return validateForm()">
+                    Name : <input placeholder="Name" type="text" name="full-name" />
+                    <br>
+
+                    Born Date :
+                    <input type="date" name="birth-date" />
+                    <br>
+
+                    Gender :
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="male">
+                    <label for="female">Female</label>
+                    <br>
+
+                    Message :
+                    <textarea placeholder="Message" name="messages" id=""></textarea>
+                    <br>
+
+                    <input type="submit" value="Submit">
                 </form>
+                <!--
+                <div>
+                    <p>Name : <span id="sender-full-name"></span></p>
+                    <p>Birth Date : <span id="sender-birth-date"></span></p>
+                    <p>Gender : <span id="sender-gender"></span></p>
+                    <p>Message : <span id="sender-message"></span></p>
+                </div> -->
 
                 <!-- Result Form -->
                 <div>
@@ -116,9 +126,11 @@
     </main>
 
     <footer id="footer-section">
-        <p style="margin: 0px;">Made by Rasyid Nabil Pujantara</p>
+        <p style="margin: 0px;">Made by <i>Rasyid Nabil Pujantara</i></p>
         <p><i>Muzashi Yukihime</i></p>
     </footer>
+    <script src="./JS/script.js"></script>
 
 </body>
 
+</html>

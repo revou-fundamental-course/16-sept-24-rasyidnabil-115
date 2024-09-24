@@ -1,45 +1,68 @@
 /* CSS Miniproject */
 
+html, body {
+    margin: 0;
+    padding: 0;
+}
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 12px;
 }
 
+/* Nav Bar */
 .nav {
     display: flex;
     justify-content: space-evenly;
 }
 
 nav>a{
-    border: 1px solid;
-    padding: 8px;
+    border: 0px solid;
+    padding: 10px;
     color: black;
+    text-align: center;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 15px;
     background-color: lightgrey;
+    display: flex;
 }
 
+/* Header & Footer */
 #header-section {
     text-align: center;
     font-family: verdana;
 }
 
 #footer-section {
-    text-align: right;
-    padding: 0px;
+    text-align: center;
+    background-color: lightgray;
+    color: rgb(200, 60, 85);
+    font-size: 14px;
+    font-family: verdana;
+    padding: 15px;
     margin: 0px;
+    unicode-bidi: isolate;
 }
 
+/* Images */
+.logo-content {
+    display: flex;
+    align-items: center;
+}
 .logo-icon {
     height: 60px;
     width: 60px;
     border: 1px solid black;
-    margin: 10px 10px;
+    margin: 5px;
     background-image: url("/Assets Miniproject/1719311006125.png");
     background-size: cover;
     background-position: center;
     border-radius: 50%;
+}
+
+.logo-text {
+    padding-left: 5px;
 }
 
 .photo-banner {
@@ -74,4 +97,33 @@ nav>a{
 
 }
 
-.
+/* Table */
+.input-table {
+    display: table-caption;
+}
+
+/* Screen Resolution Setting */
+@media only screen and (max-width: 720px) {
+    .main-header {
+        flex-direction: column;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-content {
+        flex-direction: column;
+    }
+
+    .logo-text {
+        margin-top: 0;
+    }
+
+    .logo-text {
+        padding-left: 0;
+        padding-bottom: 14px;
+    }
+}

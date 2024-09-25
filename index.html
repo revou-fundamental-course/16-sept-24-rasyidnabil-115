@@ -58,19 +58,19 @@
             <div class="profile-icon-container-main">
                 <!-- 1st -->
                 <div class="profile-icon-container-sub">
-                    <div class="profile-icon"></div>
+                    <div class="profile-icon-1"></div>
                     <h4>Profile 1</h4>
                 </div>
 
                 <!-- 2nd -->
                 <div class="profile-icon-container-sub">
-                    <div class="profile-icon"></div>
+                    <div class="profile-icon-2"></div>
                     <h4>Profile 2</h4>
                 </div>
                 
                 <!-- 3rd -->
                 <div class="profile-icon-container-sub">
-                    <div class="profile-icon"></div>
+                    <div class="profile-icon-3"></div>
                     <h4>Profile 3</h4>
                 </div>
             </div>
@@ -84,39 +84,19 @@
                 <h1>Message Us</h1>
             </header>
 
-            <section>
-                <form name="message-form" onsubmit="return validateForm()">
-                    Name : <input placeholder="Name" type="text" name="full-name" />
-                    <br>
+            <section class="form-container">
+                <!-- Form -->
+                 <form action="" onsubmit="return false;">
+                    <div>
+                        <label for="name">Name : </label>
+                        <input type="text" name="name" id="input-name" />
+                    </div>
 
-                    Born Date :
-                    <input type="date" name="birth-date" />
-                    <br>
+                    <button type="submit" onclick="validateForm()">Submit</button>
+                 </form>
 
-                    Gender :
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="male">
-                    <label for="female">Female</label>
-                    <br>
-
-                    Message :
-                    <textarea placeholder="Message" name="messages" id=""></textarea>
-                    <br>
-
-                    <input type="submit" value="Submit">
-                </form>
-                <!--
                 <div>
-                    <p>Name : <span id="sender-full-name"></span></p>
-                    <p>Birth Date : <span id="sender-birth-date"></span></p>
-                    <p>Gender : <span id="sender-gender"></span></p>
-                    <p>Message : <span id="sender-message"></span></p>
-                </div> -->
-
-                <!-- Result Form -->
-                <div>
-
+                    <p>Result : <span id="result-form"></span></p>
                 </div>
             </section>
 

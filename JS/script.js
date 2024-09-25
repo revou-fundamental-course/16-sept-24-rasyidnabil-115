@@ -5,6 +5,7 @@
 // changeUsername Greeting
 function replaceUsername() {
     let username = prompt("Konnichiwa, can u type ur name? :)", "");
+    console.log(name);
     document.getElementById("username").innerHTML = username
 }
 
@@ -14,24 +15,13 @@ document.getElementById("changeUsername").addEventListener("click", function() {
     replaceUsername();
 })
 
+// Form validating
 function validateForm () {
-    const name = document.forms["message-form"]["full-name"].value;
-    const birthDate = document.forms["message-form"]["birth-date"].value;
-    const gender = document.forms["message-form"]["gender"].value;
-    const message = document.forms["message-form"]["message"].value;
-
-    if (name == "" || birhtDate == "" || gender == "" || message == "") {
-        alert("Tidak boleh ada yang")
+    let inputName = document.getElementById('input-name').value;
+    if (inputName == "") {
+        alert("Empry Form! Please Input Your Identity");
+    } else {
+        document.getElementById("result-form").innerHTML = inputName;
+        alert("Succes Submit Form");
     }
-
-    setSenderUI(name, birthDate, gender, message);
-
-    return false;
-}
-
-function setSenderUI(name, birthDate, gender, message) {
-    document.getElementById("sender-full-name").innerHTML = name;
-    document.getElementById("sender-birth-date").innerHTML = birthDate;
-    document.getElementById("sender-gender").innerHTML = gender;
-    document.getElementById("sender-message").innerHTML = message;
 }
